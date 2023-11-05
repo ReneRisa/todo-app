@@ -1,4 +1,5 @@
 import './TodoItem.css'
+
 function TodoItem({todo, removeTodo, toggleCompleted, index}) {
 
     const handleRemove = (e) => {
@@ -7,19 +8,22 @@ function TodoItem({todo, removeTodo, toggleCompleted, index}) {
     }
 
     return (
-        <li>
-            <div>
-            <p className={todo.completed ? 'completed' : ''}>
+        <li className='container'>
+            <div className='row'>
+            <div className='col'>
+            <p className={todo.completed ? 'completed' : ''}> 
                {todo}
             </p>
             <input type="checkbox"
                 checked={todo.completed}
                 onChange={() => toggleCompleted(index)}/>
             </div>
-            <div>
+            <div className='col'>
                 <button onClick={handleRemove}>
                     Delete Task
                 </button>
+            </div>
+            
             </div>
             
         </li>
@@ -27,4 +31,3 @@ function TodoItem({todo, removeTodo, toggleCompleted, index}) {
 }
 
 export default TodoItem
-//<button onClick={() => props.deleteTodo(todo.id)}>Delete</button>
