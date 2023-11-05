@@ -4,9 +4,10 @@ function TodoList(props){
         <div>
             {props.todos.length > 0?(
                 <ul>
-                    {props.todos.map((todo) => (
-                    <TodoItem key={todo.id} todo={todo} 
-                    removeTodo={props.removeTodo}/>
+                    {props.todos.map((todo, index) => (
+                    <TodoItem key={index} index={index} todo={todo} 
+                    removeTodo={props.removeTodo}
+                    toggleCompleted={props.toggleCompleted}/>
                     ))}
                 </ul>) : (
                 <p>No Tasks yet</p>
