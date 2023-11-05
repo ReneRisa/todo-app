@@ -13,8 +13,8 @@ function App() {
     setCompleted(true)
   }
 
-  const removeTodo = (index) => {
-    setTodos(todos.filter((todo, i) => i!== index))
+  const removeTodo = (todo) => {
+    setTodos(todos.filter(td => td !== todo))
   }
 
   const addTodo = (todo) => {
@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <AddTask addTodo={addTodo} completed={completed}/>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} removeTodo={removeTodo}/>
     </div>
   );
 }

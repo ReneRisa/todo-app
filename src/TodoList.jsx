@@ -5,7 +5,9 @@ function TodoList(props){
             {props.todos.length > 0?(
                 <ul>
                     {props.todos.map((todo) => (
-                    <TodoItem key={todo.id} todo={todo} />))}
+                    <TodoItem key={todo.id} todo={todo} 
+                    removeTodo={props.removeTodo}/>
+                    ))}
                 </ul>) : (
                 <p>No Tasks yet</p>
             )}
