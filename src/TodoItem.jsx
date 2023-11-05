@@ -1,4 +1,5 @@
-function TodoItem({todo, removeTodo}) {
+import './TodoItem.css'
+function TodoItem({todo, removeTodo, toggleCompleted, index}) {
 
     const handleRemove = (e) => {
         e.stopPropagation();
@@ -8,12 +9,12 @@ function TodoItem({todo, removeTodo}) {
     return (
         <li>
             <div>
-            <p>
+            <p className={todo.completed ? 'completed' : ''}>
                {todo}
             </p>
             <input type="checkbox"
                 checked={todo.completed}
-                onChange={() => removeTodo(todo.id)}/>
+                onChange={() => toggleCompleted(index)}/>
             </div>
             <div>
                 <button onClick={handleRemove}>
