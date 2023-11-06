@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from'react';
 import TodoList from './TodoList';

@@ -1,8 +1,10 @@
 import TodoItem from "./TodoItem"
 function TodoList(props){
     return (
-        <div>
-            {props.todos.length > 0?(
+        <div className="b-container fluid">
+            <div className="row g-2">
+                <div className="col">
+                {props.todos.length > 0?(
                 <ul>
                     {props.todos.map((todo, index) => (
                     <TodoItem key={index} index={index} todo={todo} 
@@ -12,7 +14,9 @@ function TodoList(props){
                 </ul>) : (
                 <p>No Tasks yet</p>
             )}
+                </div>
             
+            </div>
         </div>
     )
 }

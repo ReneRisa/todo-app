@@ -11,14 +11,20 @@ function AddTask(props) {
     }
 
     return (
-        <div>
+        <div className="container">
             <h1>TODO LIST</h1>
-            <div>
-            <input type="text" name="todoItem" 
-            value={newTask}
-            onChange={(e) => setNewTask(e.target.value)}
-            placeholder="Enter a new task"/>
-            <button onClick={addTask}>Add Task</button>
+            <div className="row g-2">
+                <div className="col-12">
+                <input type="text" name="todoItem" 
+                    value={newTask}
+                    onChange={(e) => setNewTask(e.target.value)}
+                    placeholder="Enter a new task"
+                    />
+                </div>
+                <div className="col-12">
+                    <button onClick={addTask} className="btn btn-success btn-lg">Add Task</button>
+                </div>
+            
             </div>
             
         </div>
