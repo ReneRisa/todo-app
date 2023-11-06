@@ -7,20 +7,20 @@ function TodoItem({todo, removeTodo, toggleCompleted, index}) {
     }
 
     return (
-        <li className='container'>
-            <div className='row g-2'>
-                    <div className='col-lg-7 col-md-7 col-sm-4'>
+        <li className='container p-3 mx-auto'>
+            <div className='row g-2 justify-content-center'>
+                    <div className='col-lg-5 col-md-5 col-sm-4 '>
                     <p className={todo.completed ? 'completed' : ''}> 
                     {todo}
                     </p>
                     </div>
-                    <div className='col-lg-2 col-md-2 col-sm-2'>
+                    <div className='col-lg-2 col-md-1 col-sm-1'>
                     <input type="checkbox"
                     checked={todo.completed}
                     onChange={() => toggleCompleted(index)}
                     className="form-check-input"/>
                     </div>
-            <div className='col-lg-3 col-md-3 col-sm-12'>
+            <div className='col-lg-3 col-md-3 col-sm-3'>
                 <button onClick={handleRemove} className="btn btn-danger btn-sm">
                     Delete Task
                 </button>

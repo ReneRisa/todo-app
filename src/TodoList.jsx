@@ -1,9 +1,9 @@
 import TodoItem from "./TodoItem"
 function TodoList(props){
     return (
-        <div className="b-container fluid">
-            <div className="row g-2">
-                <div className="col">
+        <div className="container">
+            <div className="row g-2 justify-content-center">
+                
                 {props.todos.length > 0?(
                 <ul>
                     {props.todos.map((todo, index) => (
@@ -14,7 +14,7 @@ function TodoList(props){
                 </ul>) : (
                 <p>No Tasks yet</p>
             )}
-                </div>
+                
             
             </div>
         </div>
